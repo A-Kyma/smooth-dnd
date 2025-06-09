@@ -166,8 +166,8 @@ function handleDrop({ element, draggables, layout, getOptions }: ContainerProps)
         const dropHandlerParams = {
           removedIndex,
           addedIndex: actualAddIndex,
-          payload: draggableInfo.payload,
-          // droppedElement: draggableInfo.element.firstElementChild,
+          //pass all info into payload. payload and Element
+          payload: draggableInfo
         };
         dropHandler(dropHandlerParams, getOptions().onDrop);
       }
