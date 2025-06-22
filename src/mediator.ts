@@ -161,6 +161,8 @@ function handleDropAnimation(callback: Function) {
     Utils.removeClass(ghostInfo.ghost, 'animated');
     ghostInfo!.ghost.style.transitionDuration = null!;
     getGhostParent().removeChild(ghostInfo.ghost);
+    Utils.removeClass(window.document.body, constants.disbaleTouchActions);
+    Utils.removeClass(window.document.body, constants.noUserSelectClass);
     callback();
   }
 
